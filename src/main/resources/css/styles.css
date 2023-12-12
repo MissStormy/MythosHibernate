@@ -1,0 +1,41 @@
+.mainPane{
+    -fx-background-color: #9B9B9B;
+}
+.label{
+    -fx-font-family: "Baskerville Old Face";
+}
+.titlelbl{
+    -fx-font-size: 20px;
+    -fx-font-family: "Baskerville Old Face";
+}
+.welcomelbl{
+    -fx-font-size: 30px;
+    -fx-font-family: "Baskerville Old Face";
+}
+.closebtn{
+    -fx-font-family: "Baskerville Old Face";
+    -fx-border-color: transparent;
+    -fx-border-width: 0;
+    -fx-background-radius: 0;
+    -fx-background-color: transparent;
+}
+.mainbtn{
+    -fx-font-family: "Baskerville Old Face";
+    -fx-font-size: 20;
+    -fx-text-alignment: center;
+    -fx-opacity: 80%;
+}
+.menubtn{
+    -fx-font-family: "Baskerville Old Face";
+    -fx-font-size: 15;
+    -fx-text-alignment: center;
+
+}
+.text-field{
+    -fx-font-family: "Baskerville Old Face";
+    -fx-font-size: 15px;
+}
+.combo-box{
+    -fx-font-family: "Baskerville Old Face";
+    -fx-font-size: 15px;
+}

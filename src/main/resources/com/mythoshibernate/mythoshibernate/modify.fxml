@@ -1,14 +1,67 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="com.mythoshibernate.mythoshibernate.controller.ModifyCtrl"
-            prefHeight="400.0" prefWidth="600.0">
-
+<AnchorPane prefHeight="487.0" prefWidth="744.0" styleClass="mainPane" stylesheets="@../../../css/styles.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mythoshibernate.mythoshibernate.controller.ModifyCtrl">
+    <children>
+        <Line endX="-2.000030517578125" endY="356.20001220703125" layoutX="450.0" layoutY="103.0" startX="-2.000030517578125" startY="-79.80000305175781" />
+        <ImageView fitHeight="296.0" fitWidth="447.0" layoutY="190.0" opacity="0.39" pickOnBounds="true">
+            <image>
+                <Image url="@../../../images/tentacleBG.png" />
+            </image>
+        </ImageView>
+        <Button fx:id="CloseBtn" layoutX="712.0" layoutY="2.0" mnemonicParsing="false" onAction="#OnClickClose" prefHeight="26.0" prefWidth="32.0" styleClass="closebtn" text="X" underline="true" />
+        <Label layoutX="32.0" layoutY="35.0" prefHeight="53.0" prefWidth="253.0" styleClass="welcomelbl" text="Modificar mito" />
+        <Label layoutX="32.0" layoutY="82.0" prefHeight="26.0" prefWidth="383.0" styleClass="titlelbl" text="Modifica los datos si te atreves..." />
+        <TextField fx:id="Nametxt" layoutX="35.0" layoutY="150.0" prefHeight="26.0" prefWidth="227.0" promptText="Nombre del mito">
+            <effect>
+                <InnerShadow />
+            </effect>
+        </TextField>
+        <ComboBox fx:id="ClassCmb" layoutX="280.0" layoutY="150.0" prefHeight="26.0" prefWidth="150.0" promptText="Clase" />
+        <ComboBox fx:id="GenderCmb" layoutX="34.0" layoutY="214.0" prefWidth="150.0" promptText="Genero" />
+        <TextField fx:id="Origintxt" layoutX="211.0" layoutY="214.0" prefHeight="26.0" prefWidth="227.0" promptText="Lugar de origen">
+            <effect>
+                <InnerShadow />
+            </effect>
+        </TextField>
+        <TextField fx:id="Biotxt" layoutX="36.0" layoutY="272.0" prefHeight="72.0" prefWidth="397.0" promptText="Biografia">
+            <effect>
+                <InnerShadow />
+            </effect>
+        </TextField>
+        <Button fx:id="SaveBtn" layoutX="80.0" layoutY="378.0" mnemonicParsing="false" onAction="#OnClickSave" styleClass="menubtn" text="Guardar">
+            <effect>
+                <DropShadow />
+            </effect>
+        </Button>
+        <Button fx:id="CleanBtn" layoutX="207.0" layoutY="378.0" mnemonicParsing="false" onAction="#OnClickClean" styleClass="menubtn" text="Limpiar">
+            <effect>
+                <DropShadow />
+            </effect>
+        </Button>
+        <Button fx:id="CancelBtn" layoutX="325.0" layoutY="378.0" mnemonicParsing="false" onAction="#OnClickCancel" styleClass="menubtn" text="Cancelar">
+            <effect>
+                <DropShadow />
+            </effect>
+        </Button>
+        <Button fx:id="VolverBtn" layoutY="2.0" mnemonicParsing="false" onAction="#OnClickVolver" styleClass="closebtn" text="Volver" />
+        <TableView fx:id="TbMythos" layoutX="463.0" layoutY="50.0" onMouseClicked="#seleccionarMytho" prefHeight="406.0" prefWidth="266.0">
+            <columns>
+                <TableColumn fx:id="TbcMythos1" prefWidth="128.0" text="Nombre" />
+                <TableColumn fx:id="TbcMythos2" prefWidth="137.0" text="Tipo" />
+            </columns>
+        </TableView>
+    </children>
 </AnchorPane>

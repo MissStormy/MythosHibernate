@@ -1,14 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="com.mythoshibernate.mythoshibernate.controller.ListCtrl"
-            prefHeight="400.0" prefWidth="600.0">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="487.0" prefWidth="744.0" styleClass="mainPane" stylesheets="@../../../css/styles.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mythoshibernate.mythoshibernate.controller.ListCtrl">
+    <ImageView fitHeight="421.0" fitWidth="744.0" layoutY="65.0" opacity="0.39" pickOnBounds="true">
+        <image>
+            <Image url="@../../../images/tentacleBG.png" />
+        </image>
+    </ImageView>
+    <Button fx:id="CloseBtn" layoutX="712.0" layoutY="2.0" mnemonicParsing="false" onAction="#OnClickClose" prefHeight="26.0" prefWidth="32.0" styleClass="closebtn" text="X" underline="true" />
+    <Label layoutX="32.0" layoutY="35.0" prefHeight="53.0" prefWidth="253.0" styleClass="welcomelbl" text="Lista de mitos" />
+    <Label layoutX="32.0" layoutY="82.0" prefHeight="26.0" prefWidth="383.0" styleClass="titlelbl" text="Revisa tus ultimos descubrimientos" />
+    <Button fx:id="VolverBtn" layoutY="2.0" mnemonicParsing="false" onAction="#OnClickVolver" styleClass="closebtn" text="Volver" />
+    <TableView fx:id="TbMythos" layoutX="32.0" layoutY="120.0" prefHeight="340.0" prefWidth="674.0">
+        <columns>
+            <TableColumn fx:id="TbcMythos1" prefWidth="75.0" text="Nombre" />
+            <TableColumn fx:id="TbcMythos2" prefWidth="75.0" text="Tipo" />
+            <TableColumn fx:id="TbcMythos3" prefWidth="75.0" text="Genero" />
+            <TableColumn fx:id="TbcMythos4" prefWidth="116.0" text="Origen" />
+            <TableColumn fx:id="TbcMythos5" prefWidth="332.0" text="Bio" />
+        </columns>
+        <effect>
+            <DropShadow />
+        </effect>
+    </TableView>
 
 </AnchorPane>
